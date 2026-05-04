@@ -1,1 +1,182 @@
-<p>boas-vindas works!</p>
+<header>
+  <h1>Plano de estudos para Angular</h1>
+  <p>Uma página simples para organizar minha jornada de aprendizagem.</p>
+</header>
+
+<nav aria-label="Navegação principal">
+  <a href="#fundamentos">Fundamentos</a>
+  <a href="#cronograma">Cronograma</a>
+  <a href="#recursos">Recursos</a>
+  <a href="#dificuldades">Dificuldades</a>
+</nav>
+
+<main>
+  <section id="fundamentos" aria-labelledby="titulo-fundamentos">
+    <h2 id="titulo-fundamentos">Fundamentos necessários</h2>
+    <p>Antes de avançar para Angular, vou estudar a base do desenvolvimento web
+    <ul>
+      <li>Ambiente de desenvolvimento</li>
+      <li>HTML: estrutura e semântica</li>
+      <li>CSS: estilos e layout</li>
+      <li>JavaScript: lógica de programação</li>
+      <li>TypeScript: tipagem e organização</li>
+    </ul>
+  </section>
+
+  <section id="cronograma" aria-labelledby="titulo-cronograma">
+    <h2 id="titulo-cronograma">Cronograma inicial</h2>
+    <table>
+      <caption>Primeira semana de estudos</caption>
+      <thead>
+        <tr>
+          <th>Dia</th>
+          <th>Tópico</th>
+          <th>Objetivo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Segunda</td>
+          <td>HTML básico</td>
+          <td>Criar uma página simples</td>
+        </tr>
+        <tr>
+          <td>Terça</td>
+          <td>HTML semântico</td>
+          <td>Usar header, nav, main, section e footer</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="recursos" aria-labelledby="titulo-recursos">
+    <h2 id="titulo-recursos">Recursos úteis</h2>
+    <p>Para consultar detalhes técnicos, posso usar a documentação da MDN.</p>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">Consultar documento</a>
+  </section>
+
+  <section id="dificuldades" aria-labelledby="titulo-dificuldades">
+    <h2 id="titulo-dificuldades">Dificuldades</h2>
+    <p>Aqui vai um resumo das principais dificuldades comuns para iniciantes</p>
+    <ol>
+      <li>Misturar responsabilidades (HTML, CSS e JavaScript)</li>
+      <ul>
+        <li>Iniciantes tendem a usar HTML para aparência (“deixar bonito”), quando na verdade ele serve para estrutura e significado.</li>
+        <li>Dificuldade em separar:</li>
+        <ul>
+          <li>HTML → estrutura</li>
+          <li>CSS → visual</li>
+          <li>JavaScript → comportamento</li>
+        </ul>
+      </ul>
+
+      <li>Falta de entendimento de semântica</li>
+      <ul>
+        <li>Uso excessivo de &lt;div&gt; para tudo.</li>
+        <li>Dificuldade em escolher elementos corretos como &lt;header&gt;, &lt;main&gt;, &lt;section&gt;, etc.</li>
+        <li>Não entender que HTML comunica significado, não só estrutura.</li>
+      </ul>
+
+      <li>Estrutura e hierarquia do documento</li>
+      <ul>
+        <li>Problemas para entender:</li>
+        <ul>
+          <li>Estrutura básica (&lt;!DOCTYPE&gt;, &lt;html&gt;, &lt;head&gt;, &lt;body&gt;)</li>
+          <li>Organização do conteúdo</li>
+        </ul>
+        <li>Dificuldade em montar páginas completas corretamente.</li>
+      </ul>
+
+      <li>Erros de aninhamento (muito comum)</li>
+      <ul>
+        <li>Fechar tags fora de ordem:</li>
+        <ul>
+          <li>
+            <pre>
+              <code>
+                  &lt;p&gt;&lt;strong&gt;Texto&lt;/p&gt;&lt;/strong&gt;
+              </code>
+            </pre>
+          </li>
+        </ul>
+        <li>Não entender a lógica de hierarquia (pai/filho).</li>
+      </ul>
+
+      <li>Uso incorreto de atributos</li>
+      <ul>
+        <li>Esquecer aspas:</li>
+        <ul>
+          <li>
+            <pre>
+              <code>
+                  &lt;img src=logo.png&gt;
+              </code>
+            </pre>
+          </li>
+        </ul>
+        <li>Não entender função de atributos como href, src, alt, id, class.</li>
+      </ul>
+
+      <li>Problemas com imagens</li>
+      <ul>
+        <li>Não usar atributo alt ou usar de forma inútil (alt="imagem").</li>
+        <li>Caminhos errados → imagem “quebrada”.</li>
+      </ul>
+
+      <li>Hierarquia incorreta de títulos</li>
+      <ul>
+        <li>Pular níveis (ex: &lt;h1&gt; → &lt;h4&gt;).</li>
+        <li>Escolher título pelo tamanho visual, não pela estrutura.</li>
+      </ul>
+
+      <li>Links pouco descritivos</li>
+      <ul>
+        <li>Uso de “clique aqui”.</li>
+        <li>Falta de clareza sobre o destino do link.</li>
+      </ul>
+
+      <li>Dificuldade com caminhos de arquivos</li>
+      <ul>
+        <li>Erros em caminhos relativos:</li>
+        <ul>
+          <li>imagens não carregam</li>
+          <li>links quebrados</li>
+        </ul>
+      </ul>
+
+      <li>Falta de validação e depuração</li>
+      <ul>
+        <li>Não usar validadores HTML.</li>
+        <li>Não identificar erros como:</li>
+        <ul>
+          <li>tags não fechadas</li>
+          <li>atributos mal escritos</li>
+        </ul>
+      </ul>
+
+      <li>Ignorar acessibilidade</li>
+      <ul>
+        <li>Não usar elementos semânticos.</li>
+        <li>Não associar &lt;label&gt; a inputs.</li>
+        <li>Não entender importância de leitores de tela.</li>
+      </ul>
+
+      <li>Pensar em aparência antes do significado</li>
+      <ul>
+        <li>Exemplo clássico:</li>
+        <ul>
+          <li>usar &lt;div&gt; estilizada em vez de &lt;h1&gt;&lt;/h1&gt;</li>
+        </ul>
+        <li>Falta da mentalidade correta:</li>
+        <ul>
+          <li>Deve pensar “o que isso significa?” em vez de “como isso parece?”</li>
+        </ul>
+      </ul>
+    </ol>
+    <p>No fundo, quase todos os problemas vêm de um ponto central, não entender que HTML é sobre significado e estrutura, não aparência</p>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2026 — Estudos de desenvolvimento web.</p>
+</footer>
