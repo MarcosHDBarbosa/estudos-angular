@@ -1,0 +1,93 @@
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.cabecalho {position: -webkit-sticky;
+  position: -webkit-sticky;    /* Suporte para navegadores Safari */
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 1000;
+  background-color: #1d4ed8;
+  color: white;
+  padding: 24px 0;
+}
+
+.cabecalho h1 {
+  margin: 0 0 12px;
+  font-size: 2rem;
+}
+
+.cabecalho p {
+  margin: 0;
+  font-size: 1.125rem;
+}
+
+.conteudo-principal {
+  padding: 40px 0;
+}
+
+.grade-cards {
+  display: grid;
+  gap: 20px;
+}
+
+.card:hover {
+  background-color: #A7C7E7;
+}
+
+.card:active {
+  background-color: #E7C7A7;
+}
+
+.card {
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.card h2 {
+  margin-top: 12px;
+  margin-bottom: 8px;
+}
+
+.card p {
+  margin: 0;
+  color: #4b5563;
+}
+
+.etiqueta {
+  display: inline-block;
+  background-color: #dbeafe;
+  color: #1d4ed8;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 999px;
+}
+
+@media (min-width: 36rem) {
+  .grade-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 48rem) {
+  .cabecalho h1 {
+    font-size: 3rem;
+  }
+
+  .grade-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.rodape {
+  text-align: center;
+  padding: 24px;
+  color: #6b7280;
+}
