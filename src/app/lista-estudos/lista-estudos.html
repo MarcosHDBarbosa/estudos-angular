@@ -1,0 +1,50 @@
+
+<main class="container">
+  <h1>Lista de estudos</h1>
+  <p>Adicione tópicos que você precisa estudar.</p>
+  <form id="form-tarefa" class="formulario" (ngSubmit)="adicionarTarefa()">
+    <label for="campo-tarefa">Nova tarefa</label>
+    <div class="linha-formulario">
+      <input id="campo-tarefa" type="text" [(ngModel)]="campoTarefa" name="campoTarefa"
+        placeholder="Ex.: praticar funções" />
+      <button type="submit">Adicionar</button>
+    </div>
+    <p *ngIf="mensagem" class="mensagem-erro">
+      {{ mensagem }}
+    </p>
+  </form>
+  <section aria-label="Tarefas cadastradas">
+    <h2>Tarefas</h2>
+    <section class="contador">
+      <div>
+        <strong>Total:</strong>
+        {{ totalTarefas }}
+      </div>
+      <div>
+        <strong>Concluídas:</strong>
+        {{ tarefasConcluidas }}
+      </div>
+      <div>
+        <strong>Pendentes:</strong>
+        {{ tarefasPendentes }}
+      </div>
+    </section>
+    <ul id="lista-tarefas" class="lista-tarefas">
+      <li  class="tarefa" *ngFor="let tarefa of tarefas" [class.concluida]="tarefa.concluida">
+        <span>
+          {{ tarefa.texto }}
+        </span>
+        <div class="acoes">
+          <button mat-icon-button (click)="alternarConclusao(tarefa.id)">
+              <mat-icon>
+                {{ tarefa.concluida ? 'check_box' : 'check_box_outline_blank' }}
+              </mat-icon>
+          </button>
+          <button class="deleta" mat-icon-button (click)="removerTarefa(tarefa.id)">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </div>
+      </li>
+    </ul>
+  </section>
+</main>

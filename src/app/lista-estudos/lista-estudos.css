@@ -1,0 +1,110 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #111827;
+  background-color: #f3f4f6;
+}
+
+.container {
+  width: 90%;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.formulario {
+  position: -webkit-sticky;
+  position: -webkit-sticky;
+  /* Suporte para navegadores Safari */
+  position: sticky;
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+.linha-formulario {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+}
+
+button {
+  padding: 8px 8px;
+  border: 0;
+  border-radius: 8px;
+  background-color: #2563eb;
+  color: white;
+  cursor: pointer;
+}
+
+.lista-tarefas {
+  list-style: none;
+  padding: 0;
+}
+
+.tarefa {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  padding: 16px;
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+}
+
+.tarefa.concluida span {
+  text-decoration: line-through;
+  color: #6b7280;
+}
+
+.acoes {
+  display: flex;
+  gap: 8px;
+}
+
+.deleta {
+  background-color: brown;
+}
+
+.contador {
+  display: flex;
+  gap: 16px;
+
+  margin: 20px 0;
+  padding: 12px;
+
+  border-radius: 8px;
+  background: #f5f5f5;
+}
+
+.contador div {
+  display: flex;
+  gap: 4px;
+}
+
+.mensagem-erro {
+  margin-top: 10px;
+  padding: 10px;
+
+  border-radius: 6px;
+
+  background: #ffebee;
+  color: #c62828;
+
+  font-size: 14px;
+}
