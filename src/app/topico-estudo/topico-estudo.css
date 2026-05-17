@@ -1,0 +1,343 @@
+/* RESET */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* LAYOUT */
+
+html,
+body {
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f7fb;
+}
+
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 97vh;
+}
+
+/* HEADER */
+
+header {
+  background: #1e293b;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+header h1 {
+  font-size: 28px;
+}
+
+/* MAIN */
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  gap: 20px;
+  overflow: hidden;
+}
+
+.top-actions {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.card-filtro,
+.card-form {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.card-filtro {
+  min-width: 240px;
+}
+
+.card-form {
+  flex: 1;
+}
+
+.form-linha {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  width: 100%;
+}
+
+.form-linha input,
+.form-linha button {
+  height: 42px;
+}
+
+/* TÍTULO */
+
+.form-linha input:nth-child(1) {
+  width: 220px;
+}
+
+/* DESCRIÇÃO */
+
+.form-linha input:nth-child(2) {
+  flex: 1;
+  min-width: 250px;
+}
+
+/* HORAS */
+
+.form-linha input:nth-child(3) {
+  width: 100px;
+}
+
+/* BOTÃO */
+
+.form-linha button {
+  width: 140px;
+}
+
+/* FORMULÁRIO */
+
+main > div:first-of-type {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+input,
+select {
+  padding: 10px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 14px;
+  background: white;
+  width: 100%;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 4px rgba(37, 99, 235, 0.4);
+}
+
+/* BOTÕES */
+
+button {
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: 0.2s;
+  font-weight: bold;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+button:not(.deleta) {
+  background: #2563eb;
+  color: white;
+}
+
+.deleta {
+  background: #dc2626;
+  color: white;
+}
+
+/* FILTRO */
+
+h2 {
+  color: #334155;
+  font-size: 20px;
+}
+
+/* MENSAGEM */
+
+.mensagem-erro {
+  color: #dc2626;
+  font-weight: bold;
+}
+
+/* CONTAINER DA TABELA */
+
+.table-container {
+  flex: 1;
+  overflow-y: auto;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* TABELA */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+thead tr {
+  background: #1e293b;
+  color: white;
+}
+
+th,
+td {
+  padding: 14px;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+tbody tr {
+  transition: background 0.2s;
+}
+
+tbody tr:hover {
+  background: #f1f5f9;
+}
+
+/* STATUS */
+
+td select {
+  width: 100%;
+}
+
+/* FOOTER */
+
+footer {
+  background: #1e293b;
+  color: white;
+  text-align: center;
+  padding: 14px;
+  font-size: 14px;
+}
+
+/* SCROLLBAR */
+
+.table-container::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 10px;
+}
+
+.table-container::-webkit-scrollbar-track {
+  background: #e2e8f0;
+}
+
+/* BOTÃO CHECK */
+
+.btn-check {
+  background: transparent !important;
+  color: #475569 !important;
+  border-radius: 50%;
+}
+
+.btn-check:hover {
+  background: rgba(0, 0, 0, 0.06) !important;
+}
+
+.btn-check mat-icon {
+  font-size: 22px;
+}
+
+/* LINHA INATIVA */
+
+.linha-inativa {
+  opacity: 0.45;
+  background: #f8fafc;
+}
+
+.linha-inativa:hover {
+  background: #f1f5f9 !important;
+}
+
+.linha-inativa td {
+  color: #64748b;
+}
+
+.linha-inativa select {
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+
+  :host {
+    height: auto;
+    min-height: 100vh;
+  }
+
+  main {
+    padding: 12px;
+    overflow: visible;
+  }
+
+  .top-actions {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .card-form,
+  .card-filtro {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .form-linha {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  /* REMOVE TAMANHOS FIXOS */
+
+  .form-linha input:nth-child(1),
+  .form-linha input:nth-child(2),
+  .form-linha input:nth-child(3),
+  .form-linha button {
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  input,
+  select,
+  button {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .table-container {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: auto;
+  }
+
+  table {
+    min-width: 700px;
+  }
+
+  footer {
+    margin-top: 12px;
+  }
+}

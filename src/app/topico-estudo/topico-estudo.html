@@ -1,0 +1,75 @@
+<header>
+  <h1>Tópicos de Estudos</h1>
+</header>
+<main>
+<div class="top-actions">
+  <div class="card-filtro">
+    <h2>Filtrar por Status</h2>
+    <select [(ngModel)]="filtroStatus">
+      <option value="todos">
+        Todos
+      </option>
+      <option *ngFor="let status of statusDisponiveis" [value]="status">
+        {{ status }}
+      </option>
+    </select>
+  </div>
+  <div class="card-form">
+    <h2>Novo Tópico</h2>
+    <div class="form-linha">
+      <input type="text" placeholder="Título" [(ngModel)]="novoTitulo">
+      <input type="text" placeholder="Descrição" [(ngModel)]="novaDescricao">
+      <input type="number" placeholder="Horas" [(ngModel)]="novasHoras">
+      <button (click)="incluirTopico()">
+        Adicionar
+      </button>
+    </div>
+    <p *ngIf="mensagem" class="mensagem-erro">
+      {{ mensagem }}
+    </p>
+  </div>
+</div>
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Inativa</th>
+          <th>Título</th>
+          <th>Descrição</th>
+          <th>Horas</th>
+          <th>Status</th>
+          <th>Deletar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let topico of topicosFiltrados" [class.linha-inativa]="topico.inativa">
+          <td>
+            <button class="btn-check" mat-icon-button (click)="inativarTopico(topico.id)">
+              <mat-icon>
+                {{ topico.inativa? 'check_box' : 'check_box_outline_blank'}}
+              </mat-icon>
+            </button>
+          </td>
+          <td>{{ topico.titulo }}</td>
+          <td>{{ topico.descricao }}</td>
+          <td>{{ topico.horasEstimadas }}h</td>
+          <td>
+            <select [ngModel]="topico.status" (ngModelChange)="alterarStatus(topico.id, $event)">
+              <option *ngFor="let status of statusDisponiveis" [value]="status">
+                {{ status }}
+              </option>
+            </select>
+          </td>
+          <td>
+            <button class="deleta" mat-icon-button (click)="removerTopico(topico.id)">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</main>
+<footer>
+  <p>&copy; 2026 — Estudos de desenvolvimento web.</p>
+</footer>
